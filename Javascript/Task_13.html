@@ -1,0 +1,148 @@
+<!--Task 13: Debugging and Testing-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Satisfy&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- CSS Folder Link Path -->
+    <link rel="stylesheet" href="..\CSS3\styles\all_tasks_styles.css">
+
+    <!-- Script File Reference -->
+    <script src="scripts/Task_13.js" defer></script>
+</head>
+
+<body>
+    <h1 class="center-text site-title">Local Community Event Portal</h1>
+
+    <!--Navigation-->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="../HTML5/help.html" target="_blank">Help</a>
+    </nav>
+
+    <!--Main Content-->
+    <br>
+
+    <div id="welcomeBanner">
+        Welcome back!
+        <span class="special-offer">
+            <p>Special Offer: Free event entry this weekend!</p>
+        </span>
+    </div>
+
+    <section id="home">
+        <h2 class="highlight">Welcome to the Local Community Event Portal</h2>
+        <p class="center-text intro-para">Discover and participate in local events happening around you</p>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <ul class="event-list">
+            <li>Community Picnic — <em>June 15, 2026</em></li>
+            <li>Farmers Market — <em>Every Saturday</em></li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p class="contact-para">To contact us, please click <a href="../HTML5/help.html" target="_blank">here</a>.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Past Community Events</h2>
+        <table>
+            <caption>Gallery</caption>
+            <tr>
+                <td>
+                    <img src="../HTML5/images/picnic.jpg" alt="Community Picnic" title="Community Picnic Event" class="event-img">
+                    <p class="gallery-label"><b>Community Picnic 2025</b></p>
+                </td>
+                <td>
+                    <img src="../HTML5/images/market.jpg" alt="Farmers Market" title="Farmers Market" class="event-img">
+                    <p class="gallery-label"><b>Farmers Market Festival</b></p>
+                </td>
+                <td>
+                    <img src="../HTML5/images/music.jpg" alt="Music Night" title="Local Music Night" class="event-img">
+                    <p class="gallery-label"><b>Music Night Celebration</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="../HTML5/images/sports.jpg" alt="Sports Event" title="Community Sports Day" class="event-img">
+                    <p class="gallery-label"><b>Annual Sports Day</b></p>
+                </td>
+                <td>
+                    <img src="../HTML5/images/clean.jpg" alt="Cleanup Drive" title="Neighborhood Cleanup" class="event-img">
+                    <p class="gallery-label"><b>Neighborhood Cleanup Drive</b></p>
+                </td>
+                <td>
+                    <img src="../HTML5/images/workshop.jpg" alt="Workshop" title="Community Workshop" class="event-img">
+                    <p class="gallery-label"><b>Skill Development Workshop</b></p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="registration" class="center-text">
+        <h2 class="highlight">Event Registration Form</h2>
+        <form id="debuggedRegistrationForm">
+            <label>Name:</label>
+            <input type="text" id="devName" placeholder="Enter your name" required><br><br>
+
+            <label>Email:</label>
+            <input type="email" id="devEmail" placeholder="Enter your email" required><br><br>
+
+            <input type="submit" value="Register"><br><br>
+
+            <output id="msg"></output>
+        </form>
+    </section>
+
+    <h2>Event Feedback Form</h2>
+    <label>Phone:</label>
+    <input type="text" id="phone" placeholder="10-digit number" onblur="checkPhone()">
+    <p id="pmsg"></p>
+
+    <br>
+
+    <label>Event:</label>
+    <select onchange="showFee(this.value)">
+        <option value="">Select</option>
+        <option value="100">Picnic</option>
+        <option value="50">Market</option>
+    </select>
+    <p id="fee"></p>
+
+    <br>
+
+    <label>Feedback:</label><br>
+    <textarea id="fb" onkeyup="count()"></textarea>
+    <p class="char-count">Characters: <span id="count">0</span></p>
+
+    <br>
+
+    <button onclick="submitForm()">Submit Feedback</button>
+    <p id="emsg"></p>
+
+    <br>
+
+    <h2 class="justify-text">To see the Layout: <a href="../HTML5/task_07.html" target="_blank">Click Here</a></h2>
+    <h2 class="justify-text">To save your event preference: <a href="../HTML5/task_08.html" target="_blank">Click Here</a></h2>
+    <h2 class="justify-text">To find the nearest event based on your location: <a href="../HTML5/task_09.html" target="_blank">Click Here</a></h2>
+    <h2 class="justify-text">To access Debugging with Chrome DevTools: <a href="../HTML5/task_10.html" target="_blank">Click Here</a></h2>
+
+    <footer class="center-text">
+        <span class="footer-text">Local Community Event Portal &copy; 2026</span><br>
+    </footer>
+</body>
+
+</html>
