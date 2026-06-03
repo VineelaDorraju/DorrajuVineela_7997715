@@ -1,0 +1,63 @@
+/*Task 2: CSS Syntax and Comments*/
+
+/* Style for complete webpage */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style for navigation bar */
+.navbar {
+    text-align: center;
+}
+
+/* Style for highlighted headings */
+.highlight {
+    color: maroon;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for welcome banner section */
+#welcomeBanner {
+    text-align: center;
+    background-color: rgb(255, 192, 202);
+    color: red;
+}
+
+/* Style for special offer text */
+.special-offer {
+    color: maroon;
+    font-weight: bold;
+}
+
+/* Style for gallery section */
+#gallery {
+    background-color: goldenrod;
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Style for tables and table cells */
+table,
+td {
+    border: 4px solid maroon;
+}
+
+/* Style for event images */
+.event-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Style for centered text */
+.center-text {
+    text-align: center;
+}
+
+/* Style for justified text */
+.justify-text {
+    text-align: justify;
+}

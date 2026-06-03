@@ -1,0 +1,525 @@
+/* Task 9: Multiple Columns in Text */
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: #f0ebe0;
+    background-image: url("images/countryside.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Lora", Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.85;
+    color: #2c1f0e;
+    letter-spacing: 0.01em;
+}
+
+/* Site Title h1 */
+.site-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    color: #fff8f0;
+    text-shadow: 2px 3px 0px #4a3220, 0 0 30px rgba(74, 50, 32, 0.5);
+    padding: 28px 20px 12px;
+    margin-bottom: 0;
+    background: linear-gradient(180deg,
+        rgba(74, 50, 32, 0.72) 0%,
+        rgba(74, 50, 32, 0.45) 100%);
+}
+
+/* All h2 headings */
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    color: #fff8f0;
+    background: linear-gradient(100deg,
+        rgba(74, 50, 32, 0.88),
+        rgba(107, 73, 38, 0.80),
+        rgba(139, 101, 54, 0.72));
+    padding: 12px 18px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    border-left: 4px solid #c8a96e;
+}
+
+/* Highlight class */
+.highlight {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: #fff3e0;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(74, 50, 32, 0.45);
+    border-left: none;
+    border-bottom: 2px dotted #c8a96e;
+    background: linear-gradient(100deg,
+        rgba(139, 80, 40, 0.82),
+        rgba(176, 113, 50, 0.75));
+    letter-spacing: 0.06em;
+}
+
+/* LINK PSEUDO-CLASSES */
+
+a:link {
+    color: #a06030;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #c8a96e;
+    transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+a:visited {
+    color: #6b4226;
+    text-decoration-color: #a07840;
+}
+
+a:hover {
+    color: #e8c97a;
+    text-decoration-color: #e8c97a;
+    text-decoration-style: dotted;
+}
+
+a:active {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+}
+
+/* NAVIGATION LIST */
+
+.navbar {
+    background-color: rgba(44, 31, 14, 0.82);
+    padding: 0;
+}
+
+.nav-list {
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    padding: 12px 0;
+    margin: 0 8px;
+}
+
+.nav-list a:link {
+    font-family: "IM Fell English", serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #f5e6c8;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+}
+
+.nav-list a:visited {
+    color: #d4b896;
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    color: #e8c97a;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #e8c97a;
+    text-decoration-style: dotted;
+}
+
+.nav-list a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* WELCOME BANNER */
+
+#welcomeBanner {
+    background-color: rgba(44, 31, 14, 0.80);
+    color: #fff8f0;
+    text-align: center;
+    padding: 18px 20px;
+    font-family: "Satisfy", cursive;
+    font-size: 1.55rem;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+}
+
+.special-offer p {
+    font-family: "IM Fell English", serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #f5d87a;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+    margin-top: 6px;
+}
+
+/* SECTIONS */
+
+section {
+    margin: 28px 0;
+    padding: 24px 28px;
+    background: rgba(44, 31, 14, 0.45);
+    border-radius: 6px;
+    border: 1px solid rgba(200, 169, 110, 0.30);
+}
+
+/* INTRO PARAGRAPH */
+
+.intro-para {
+    font-family: "Lora", serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.025em;
+    line-height: 2;
+    color: #fff8f0;
+    background: rgba(44, 31, 14, 0.55);
+    padding: 14px 24px;
+    border-radius: 4px;
+    margin: 10px auto;
+    max-width: 680px;
+}
+
+.contact-para {
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+    color: #fff8f0;
+    background: rgba(44, 31, 14, 0.50);
+    padding: 10px 18px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* EVENT LIST (ordered) */
+
+.event-list {
+    font-family: "IM Fell English", serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 2.1;
+    letter-spacing: 0.04em;
+    color: #fff8f0;
+    background: rgba(44, 31, 14, 0.55);
+    border-radius: 4px;
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding: 14px 20px;
+    margin: 0;
+}
+
+.event-list li {
+    padding: 6px 0;
+    margin-bottom: 4px;
+}
+
+.event-list em {
+    font-family: "Satisfy", cursive;
+    font-size: 1rem;
+    color: #f5d87a;
+    font-style: normal;
+}
+
+/* QUICK LINKS LIST (unordered) */
+
+.quick-links {
+    list-style-type: square;
+    list-style-position: outside;
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #fff8f0;
+    background: rgba(44, 31, 14, 0.55);
+    border-radius: 4px;
+    padding: 14px 14px 14px 40px;
+    margin: 12px 0 24px;
+}
+
+.quick-links li {
+    padding: 5px 0;
+    margin-bottom: 6px;
+}
+
+/* EVENT CARD */
+
+.eventCard {
+    border: 2px solid #c8a96e;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    background: rgba(255, 248, 240, 0.88);
+    color: #2c1f0e;
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    outline: none;
+}
+
+.eventCard:focus,
+.eventCard.selected {
+    outline: 3px solid #a06030;
+    outline-offset: 3px;
+}
+
+/* COMMUNITY BULLETIN: multi-column newspaper layout */
+
+#bulletin {
+    margin: 28px 0;
+    padding: 24px 28px;
+    background: rgba(255, 248, 240, 0.92);
+    border-radius: 6px;
+    border: 1px solid rgba(200, 169, 110, 0.50);
+}
+
+/* Bulletin heading sits above the columns, spanning the full width */
+#bulletin h2 {
+    column-span: all;
+    margin-bottom: 16px;
+}
+
+/* Multi-column layout applied to the article inside the bulletin */
+.bulletin-columns {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #2c1f0e;
+    text-align: justify;
+}
+
+/* Sub-headings inside the bulletin break before a new column if needed */
+.bulletin-columns h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #5a3a1a;
+    margin: 14px 0 6px;
+    break-after: avoid;             /* keeps heading attached to its following paragraph */
+}
+
+/* GALLERY */
+
+#gallery {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 248, 240, 0.90);
+}
+
+table caption {
+    font-family: "Satisfy", cursive;
+    font-size: 1.5rem;
+    color: #fff8f0;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    text-shadow: 1px 2px 4px rgba(44, 31, 14, 0.6);
+}
+
+table, td {
+    text-align: center;
+    vertical-align: middle;
+    border: 3px solid #a07840;
+}
+
+td {
+    padding: 10px;
+}
+
+.gallery-label {
+    font-family: "IM Fell English", serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+    color: #3d2b10;
+    margin-top: 6px;
+    text-transform: capitalize;
+}
+
+.event-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgba(44, 31, 14, 0.3);
+}
+
+/* FORM */
+
+label {
+    font-family: "IM Fell English", serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    letter-spacing: 0.07em;
+    color: #fff8f0;
+    display: block;
+    margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    font-family: "Lora", serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    color: #2c1f0e;
+    background: rgba(255, 248, 240, 0.92);
+    border: 1.5px solid #a07840;
+    border-radius: 4px;
+    padding: 7px 12px;
+    width: min(320px, 90%);
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #c8a96e;
+    outline-offset: 2px;
+}
+
+textarea {
+    width: min(360px, 92%);
+    height: 90px;
+    resize: vertical;
+}
+
+input[type="submit"],
+button {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff8f0;
+    background: linear-gradient(120deg, #5a3a1a, #8b6534);
+    border: 2px solid #c8a96e;
+    border-radius: 4px;
+    padding: 10px 30px;
+    margin-top: 6px;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.15s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: linear-gradient(120deg, #7a5228, #a07840);
+    transform: translateY(-1px);
+}
+
+output#msg,
+#emsg {
+    font-family: "Satisfy", cursive;
+    font-size: 1.1rem;
+    color: #f5d87a;
+    letter-spacing: 0.05em;
+    line-height: 2;
+}
+
+#pmsg {
+    font-family: "IM Fell English", serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    color: #f5e6c8;
+}
+
+#fee {
+    font-family: "Playfair Display", serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #f5d87a;
+}
+
+.char-count {
+    font-family: "IM Fell English", serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    letter-spacing: 0.07em;
+    color: #f5e6c8;
+}
+
+/* VISIBILITY: HIDDEN vs DISPLAY: NONE */
+
+/* Element is invisible but still occupies space in the layout */
+.hidden-visibility {
+    visibility: hidden;
+}
+
+/* Element is removed from the layout entirely; no space is reserved */
+.hidden-display {
+    display: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgba(44, 31, 14, 0.88);
+    padding: 22px 20px;
+    margin-top: 30px;
+}
+
+.footer-text {
+    font-family: "Satisfy", cursive;
+    font-size: 1.25rem;
+    color: #f5e6c8;
+    letter-spacing: 0.06em;
+    display: block;
+    line-height: 1.8;
+}
+
+.footer-sub {
+    font-family: "IM Fell English", serif;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: #c8a96e;
+    letter-spacing: 0.12em;
+    display: block;
+    line-height: 2;
+}
+
+/* TEXT ALIGNMENT HELPERS */
+
+.center-text {
+    text-align: center;
+}
+
+.justify-text {
+    text-align: justify;
+}

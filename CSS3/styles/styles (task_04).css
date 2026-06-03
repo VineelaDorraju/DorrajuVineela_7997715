@@ -1,0 +1,100 @@
+/* Task 4: Color & Background Styling */
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* Body with background image + fallback color */
+body {
+    background-color: #f4f6f8; /* fallback color */
+    background-image: url("images/countryside.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #1f2d3d;
+}
+
+
+/* Element Selector for all h2 headings */
+h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    background: linear-gradient(90deg, #1e3a8a, #2563eb, #60a5fa);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* ID Selector for welcome banner */
+#welcomeBanner {
+    background-color: rgba(30, 58, 138, 0.85); /* semi-transparent navy */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Class Selector for highlight text */
+.highlight {
+    color: #b91c1c; /* maroon red */
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Navigation bar styling */
+.navbar {
+    text-align: center;
+    background-color: #111827; /* dark navy */
+    padding: 10px;
+}
+
+
+/* Special offer styling */
+.special-offer {
+    color: #fbbf24; /* golden yellow */
+    font-weight: bold;
+}
+
+/* Gallery Section */
+#gallery {
+    /* background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Grouping Selector for table and td */
+table,
+td {
+    border: 4px solid #2563eb; /* blue border */
+}
+
+/* Table styling */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+/* Event Images */
+.event-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Text alignment helpers */
+.center-text {
+    text-align: center;
+}
+
+.justify-text {
+    text-align: justify;
+}
