@@ -2,10 +2,9 @@ This repository contains my completed exercises and practice programs for the Co
 
 ## Modules Covered
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- JavaScript Build Tools
 - ANSI SQL using MySQL
+- Bootstrap 5
 - Core Java
+- CSS3
+- HTML5
+- JavaScript
