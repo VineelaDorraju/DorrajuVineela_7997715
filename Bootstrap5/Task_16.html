@@ -1,0 +1,37 @@
+<!--Task 16: Positioning Utilities-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute and Relative Positioning Layouts</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light min-vh-100 pb-5">
+
+    <div class="container py-5 text-center">
+        <h3 class="text-secondary mb-4">Badge Overlay on Image Content</h3>
+
+        <!-- Exercise 16.2: Relative card serving as anchor coordinates map -->
+        <div class="position-relative d-inline-block shadow rounded overflow-hidden">
+            <img src="https://unsplash.com" 
+                 alt="System Engine Background Node" 
+                 style="width: 320px; height: 200px; object-fit: cover; display: block;">
+            
+            <!-- Absolute floating indicator positioned over image boundaries -->
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger shadow-sm">
+                System Active
+            </span>
+        </div>
+    </div>
+
+    <!-- Exercise 16.1: Fixed structural bottom anchor footer matrix -->
+    <footer class="position-fixed bottom-0 start-0 end-0 bg-dark text-white text-center py-2 shadow-lg z-3">
+        <div class="container">
+            <span class="small fw-semibold text-info">Operational Console Framework Fixed Bottom Anchor Navigation</span>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

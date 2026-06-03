@@ -1,0 +1,56 @@
+<!--Task 4: Column Layouts and Grid Classes-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Layout Frameworks</title>
+    <!-- Relative path reference linking the npm node modules style sheet -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <!-- Exercise 4.1: Asymmetric Sidebar and Content Layout -->
+    <div class="container mb-5">
+        <h2 class="mb-4 text-secondary text-center">Asymmetric Master-Detail Split</h2>
+        <div class="row g-3">
+            <!-- Sidebar takes 3 out of 12 columns on medium screens and larger -->
+            <div class="col-md-3">
+                <div class="p-4 bg-secondary text-white rounded text-center" style="min-height: 150px;">
+                    <h5 class="m-0">Sidebar Panel<br><small>(col-md-3)</small></h5>
+                </div>
+            </div>
+            <!-- Main Content takes 9 out of 12 columns on medium screens and larger -->
+            <div class="col-md-9">
+                <div class="p-4 bg-white border rounded shadow-sm" style="min-height: 150px;">
+                    <h5 class="text-primary mb-2">Main Content Area (col-md-9)</h5>
+                    <p class="text-muted m-0">This section handles primary platform dashboard views. It expands alongside screen resolution shifts cleanly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exercise 4.2: Four Column Equal Width Grid Layout -->
+    <div class="container">
+        <h2 class="mb-4 text-secondary text-center">Equal Width Quad Segment Row</h2>
+        <div class="row g-3">
+            <!-- Four columns each taking exactly 3 units (3 * 4 = 12 columns total) on small screens and up -->
+            <div class="col-sm-3">
+                <div class="p-3 bg-dark text-white rounded text-center fw-bold">Partition 1<br><small>(col-sm-3)</small></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="p-3 bg-dark text-white rounded text-center fw-bold">Partition 2<br><small>(col-sm-3)</small></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="p-3 bg-dark text-white rounded text-center fw-bold">Partition 3<br><small>(col-sm-3)</small></div>
+            </div>
+            <div class="col-sm-3">
+                <div class="p-3 bg-dark text-white rounded text-center fw-bold">Partition 4<br><small>(col-sm-3)</small></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Relative path reference linking the npm bundle javascript package -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

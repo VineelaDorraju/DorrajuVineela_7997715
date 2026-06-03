@@ -1,0 +1,54 @@
+<!--Task 12: Spacing Utilities-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacing Architecture Matrix</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+    <!-- Exercise 12.1: Custom layout section demonstrating dynamic padding ranges (.py-5) -->
+    <section class="bg-white border-bottom py-5 text-center shadow-sm">
+        <!-- Application of custom top margin utility (.mt-4) -->
+        <h1 class="display-4 fw-bold text-dark mt-4">Enterprise Tiers Pricing Matrix</h1>
+        <p class="lead text-muted max-width-600 mx-auto">Engineered layouts using precise padding constraints to improve interface readability.</p>
+    </section>
+
+    <!-- Exercise 12.2: Structural Pricing Tiers Container Layout -->
+    <main class="container py-5">
+        <div class="row justify-content-center g-4">
+            
+            <!-- Standard tier matrix card -->
+            <div class="col-md-5">
+                <!-- Outer margins separation assignment wrapper (.m-3) -->
+                <div class="card h-100 shadow-sm border-0 m-3">
+                    <!-- Internal component specific padding (.p-4) -->
+                    <div class="card-body p-4 text-center">
+                        <span class="badge bg-secondary mb-2 text-uppercase tracking-wider">Developer Core</span>
+                        <h2 class="display-5 fw-bold my-3">INR 0 <span class="fs-6 text-muted fw-normal">/ tier</span></h2>
+                        <p class="text-muted mb-4">Sandbox deployment pipelines testing structural parameters verification methods.</p>
+                        <button class="btn btn-outline-primary w-100 py-2">Initialize Sandbox</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium tier matrix card -->
+            <div class="col-md-5">
+                <div class="card h-100 shadow border-primary border-2 m-3">
+                    <div class="card-body p-4 text-center">
+                        <span class="badge bg-primary mb-2 text-uppercase tracking-wider">Production Pro</span>
+                        <h2 class="display-5 fw-bold my-3 text-primary">INR 2,499 <span class="fs-6 text-muted fw-normal">/ tier</span></h2>
+                        <p class="text-muted mb-4">Production tier architecture featuring multi-region load balancers and real-time failure alerts.</p>
+                        <button class="btn btn-primary w-100 py-2 shadow-sm">Scale Production</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!--Task 7: Typography Utilities-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Typography Dashboard</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container bg-white p-5 border rounded shadow-sm" style="max-width: 800px;">
+        <!-- Exercise 7.1: Base typography engines and weight variables -->
+        <h1 class="display-1 text-primary text-center mb-4">Display Heading 1</h1>
+        
+        <p class="lead text-center mb-5">This is a lead paragraph utility designed to make introduction content stand out smoothly across different layouts.</p>
+        
+        <hr class="my-4">
+
+        <div class="row g-4">
+            <div class="col-md-6 border-end">
+                <h4 class="text-secondary mb-3">Weight & Mutation Helpers</h4>
+                <p class="fw-bold">This line renders with extra heavy bold styling parameters.</p>
+                <p class="fw-normal">This line renders with standard default regular weighting rules.</p>
+                <p class="text-muted">This line renders as muted text with desaturated contrast values.</p>
+            </div>
+
+            <!-- Exercise 7.2: Text capitalization transformations -->
+            <div class="col-md-6">
+                <h4 class="text-secondary mb-3">Case Transformation Helpers</h4>
+                <p class="text-uppercase">this line was typed in lowercase characters.</p>
+                <p class="text-lowercase">THIS LINE WAS TYPED IN UPPERCASE CHARACTERS.</p>
+                <p class="text-capitalize">this line tests title capitalization styles string conversions.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

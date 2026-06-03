@@ -1,0 +1,43 @@
+<!--Task 11: Cards and Media Objects-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards and Media Layouts</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container" style="max-width: 600px;">
+        <!-- Exercise 11.1: Component Profile Card Structure -->
+        <h3 class="text-secondary mb-3 text-center">Profile Card Layout</h3>
+        <div class="card shadow-sm border-0 mb-5 mx-auto" style="width: 18rem;">
+            <!-- Dummy user placeholder image asset matrix -->
+            <img src="https://unsplash.com" class="card-img-top" alt="User Profile Canvas">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Sarah Jenkins</h5>
+                <p class="card-text text-muted">Lead Systems Engineer managing distributed computational infrastructure architecture clusters.</p>
+                <a href="#" class="btn btn-primary btn-sm">Connect Profile</a>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Exercise 11.2: Modern Flexbox Media Object Pattern -->
+        <h3 class="text-secondary mb-3 text-center">Left-Aligned Media Object</h3>
+        <div class="p-4 bg-white border rounded shadow-sm">
+            <div class="d-flex align-items-start">
+                <!-- Left-aligned thumbnail node element -->
+                <img src="https://unsplash.com" class="rounded me-3" alt="Thumbnail Layout Node" style="width: 64px; height: 64px; object-fit: cover;">
+                <div>
+                    <h5 class="fw-bold mb-1">Infrastructure Incident Cluster Update</h5>
+                    <p class="text-muted m-0 fs-6">System automation components executed cluster node healing configurations across active virtual containers. Storage arrays verified matching sector blocks successfully.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

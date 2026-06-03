@@ -1,0 +1,75 @@
+<!--Task 10: Navbars and Navigation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Navigation Controls</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+    <!-- Exercise 10.1: Responsive Core Top Header Navbar Panel -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="#">EnterpriseHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topPlatformNavbar" aria-controls="topPlatformNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="topPlatformNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Console Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pipelines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Analytics</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="event.preventDefault();">
+                    <input class="form-control me-2" type="search" placeholder="Query index database" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Query</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Exercise 10.2: Nav-Tabs and Nav-Pills Component Systems -->
+    <main class="container my-5" style="max-width: 800px;">
+        <div class="bg-white p-4 border rounded shadow-sm mb-4">
+            <h4 class="text-secondary mb-3">Tabbed Context Interfaces (.nav-tabs)</h4>
+            <ul class="nav nav-tabs mb-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Primary Matrix</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Secondary Logs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Exception Dumps</a>
+                </li>
+            </ul>
+            <p class="text-muted small m-0">Tab panels toggle context spaces within integrated application dashboard frames.</p>
+        </div>
+
+        <div class="bg-white p-4 border rounded shadow-sm">
+            <h4 class="text-secondary mb-3">Pilled Layout Controls (.nav-pills)</h4>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Overview Engine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Node Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cluster Config</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

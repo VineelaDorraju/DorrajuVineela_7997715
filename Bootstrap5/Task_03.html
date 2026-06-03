@@ -1,0 +1,47 @@
+<!--Task 3: Fundamentals of Responsive Grid Layout-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    <!-- Relative path reference linking the npm node modules style sheet -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <!-- Fixed-width layout wrapper container (.container) -->
+    <div class="container">
+        <h2 class="mb-4 text-secondary text-center">Responsive Grid Layout Matrix</h2>
+        
+        <!-- Horizontal grid element grouping wrapper (.row) with row gutters (.g-3) -->
+        <div class="row g-3">
+            
+            <!-- Column 1: Full-width on mobile (col-12), half-width on tablet (col-sm-6), third-width on desktop (col-md-4) -->
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="p-4 bg-primary text-white rounded border shadow-sm text-center">
+                    <h5 class="m-0">Grid Element 1</h5>
+                </div>
+            </div>
+            
+            <!-- Column 2: Full-width on mobile (col-12), half-width on tablet (col-sm-6), third-width on desktop (col-md-4) -->
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="p-4 bg-success text-white rounded border shadow-sm text-center">
+                    <h5 class="m-0">Grid Element 2</h5>
+                </div>
+            </div>
+            
+            <!-- Column 3: Full-width on mobile (col-12), full-width on tablet (col-sm-12), third-width on desktop (col-md-4) -->
+            <div class="col-12 col-sm-12 col-md-4">
+                <div class="p-4 bg-dark text-white rounded border shadow-sm text-center">
+                    <h5 class="m-0">Grid Element 3</h5>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Relative path reference linking the npm bundle javascript package -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!--Task 9: Buttons Utilities-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Buttons Matrix</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container text-center bg-white p-5 border rounded shadow-sm" style="max-width: 800px;">
+        <!-- Exercise 9.1: Contextual Themes and Outline Variations -->
+        <h3 class="text-secondary mb-4">Contextual Buttons Matrix</h3>
+        
+        <div class="d-flex flex-wrap gap-2 justify-content-center mb-5">
+            <button class="btn btn-primary">Primary Action</button>
+            <button class="btn btn-secondary">Secondary Link</button>
+            <button class="btn btn-success">Success Confirm</button>
+            <button class="btn btn-danger">Danger Alert</button>
+            <button class="btn btn-warning">Warning Notice</button>
+            <button class="btn btn-info">Info Notice</button>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 justify-content-center mb-5">
+            <button class="btn btn-outline-primary">Outline Primary</button>
+            <button class="btn btn-outline-secondary">Outline Secondary</button>
+            <button class="btn btn-outline-success">Outline Success</button>
+            <button class="btn btn-outline-danger">Outline Danger</button>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Exercise 9.2: Structural Groups and Toggle Checkboxes -->
+        <h3 class="text-secondary mb-4">Button Clusters & Stateful Toggles</h3>
+
+        <div class="btn-group mb-4" role="group" aria-label="Standard button cluster">
+            <button type="button" class="btn btn-secondary">Previous</button>
+            <button type="button" class="btn btn-secondary">Current</button>
+            <button type="button" class="btn btn-secondary">Advance</button>
+        </div>
+
+        <br>
+
+        <div class="btn-group" role="group" aria-label="State toggle selection block">
+            <input type="checkbox" class="btn-check" id="toggleCheck1" autocomplete="off">
+            <label class="btn class btn-outline-dark" for="toggleCheck1">Option Alpha Toggle</label>
+
+            <input type="checkbox" class="btn-check" id="toggleCheck2" autocomplete="off">
+            <label class="btn class btn-outline-dark" for="toggleCheck2">Option Beta Toggle</label>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

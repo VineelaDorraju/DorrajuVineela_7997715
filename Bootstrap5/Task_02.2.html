@@ -1,0 +1,27 @@
+<!--Task 2.2: Modify HTML to include Bootstrap JavaScript Plugins-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 JavaScript Integration</title>
+    <!-- Local relative link to node_modules CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light text-dark">
+
+    <div class="container my-5 text-center">
+        <h1 class="display-4 text-primary">JavaScript Component Check</h1>
+        <p class="lead mb-4">Click the button below to test if the bundle plugin engine is running correctly.</p>
+
+        <!-- Dismissible Alert Component (Requires JS bundle to close) -->
+        <div class="alert alert-warning alert-dismissible fade show d-inline-block text-start mx-auto" role="alert" style="max-width: 500px;">
+            <strong>Engine Status:</strong> The JS bundle file is loaded. Click the close button on the right to clear this component.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <!-- Local relative link to node_modules bundle file with Popper included -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

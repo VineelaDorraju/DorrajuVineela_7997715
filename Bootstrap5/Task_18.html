@@ -1,0 +1,76 @@
+<!--Task 18: Bootstrap 5 JavaScript Plugins-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Framework Components</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container" style="max-width: 700px;">
+        <!-- Exercise 18.1: Modal Popup Activation Trigger Block -->
+        <div class="text-center mb-5">
+            <h3 class="text-secondary mb-3">Modal Trigger Control</h3>
+            <button type="button" class="btn btn-primary shadow-sm" data-bs-toggle="modal" data-bs-target="#systemDiagnosticsModal">
+                Launch Diagnostic Assessment
+            </button>
+        </div>
+
+        <!-- Modal Component Layout Container Node -->
+        <div class="modal fade" id="systemDiagnosticsModal" tabindex="-1" aria-labelledby="systemDiagnosticsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <h5 class="modal-title" id="systemDiagnosticsModalLabel">Diagnostics Infrastructure Logs</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="m-0 text-muted">Networking pipelines and load balance clusters are fully responding across all regions. Integrity verification checks returned matching checksum sequences.</p>
+                    </div>
+                    <div class="modal-content-footer p-3 text-end border-top">
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Dismiss Logs</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Exercise 18.2: Accordion Component System Grid Layout Structure -->
+        <h3 class="text-secondary mb-4 text-center">Collapsible Accordion Group</h3>
+        <div class="accordion shadow-sm" id="platformConfigurationAccordion">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Cluster Management Configuration
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#platformConfigurationAccordion">
+                    <div class="accordion-body text-muted">
+                        Virtual containers allocate processing frequencies dynamically based on scaling bounds limits configurations defined across configuration files.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Database Storage Persistence Layers
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#platformConfigurationAccordion">
+                    <div class="accordion-body text-muted">
+                        Automated transaction validation protocols process encrypted sequence checks continuously across segregated physical server volumes.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

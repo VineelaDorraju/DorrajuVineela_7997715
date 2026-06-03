@@ -1,0 +1,13 @@
+// custom.scss
+// Exercise 19.2: Customization of primary palette maps and default structural borders
+
+// Overriding theme colors
+$primary: #4a148c;   // Dark Purple Custom Palette Value Accent
+$secondary: #006064; // Teal Tone Value Accent
+
+// Overriding default structural geometric parameters
+$border-radius: 1.5rem;      // Global heavy round override rule configuration
+$border-radius-sm: 0.75rem;
+
+// Import raw abstract dependency configuration lines from npm local package distribution source trees
+@import "node_modules/bootstrap/scss/bootstrap";
