@@ -1,0 +1,37 @@
+<!--Task 7:Video Invite with Media Events-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Invite</title>
+
+    <script>
+    function videoReady() {
+        document.getElementById("status").innerHTML =
+            "Video ready to play";
+    }
+
+    function warnExit(event) {
+        event.preventDefault();
+        event.returnValue = "";
+    }
+    </script>
+</head>
+
+<body onbeforeunload="warnExit(event)">
+
+    <h2 style="text-align:center;">Event Promo Video</h2>
+
+    <div style="text-align:center;">
+
+        <video width="400" controls oncanplay="videoReady()">
+            <source src="video/layout.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+
+        <p id="status"></p>
+
+    </div>
+
+</body>
+</html>

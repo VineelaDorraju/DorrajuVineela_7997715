@@ -1,0 +1,54 @@
+<!--Task 8: Saving User Preferences-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Preferences</title>
+
+    <script>
+    function savePreference() {
+        let eventType = document.getElementById("eventType").value;
+
+        localStorage.setItem("eventType", eventType);
+        sessionStorage.setItem("eventType", eventType);
+    }
+
+    function loadPreference() {
+        let saved = localStorage.getItem("eventType");
+
+        if (saved) {
+            document.getElementById("eventType").value = saved;
+        }
+    }
+
+    function clearPreference() {
+        localStorage.clear();
+        sessionStorage.clear();
+
+        document.getElementById("eventType").value = "";
+    }
+    </script>
+</head>
+
+<body onload="loadPreference()">
+
+    <h2 style="text-align:center;">Event Preference</h2>
+
+    <div style="text-align:center;">
+
+        <label>Select Event Type:</label>
+        <select id="eventType" onchange="savePreference()">
+            <option value="">Select</option>
+            <option value="picnic">Picnic</option>
+            <option value="market">Farmers Market</option>
+            <option value="music">Music Event</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="clearPreference()">Clear Preferences</button>
+
+    </div>
+
+</body>
+</html>

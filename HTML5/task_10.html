@@ -1,0 +1,41 @@
+<!--Task 10: Debugging with Chrome DevTools-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging Basic Example</title>
+
+    <style>
+    .box {
+        background: lightblue;
+        padding: 20px;
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    function calculate() {
+        let a = 10;
+       debugger;   // breakpoint here
+        let b = 20;
+
+        console.log("Value of a:", a);
+        console.log("Value of b:", b);
+
+        let sum = a + b;
+        console.log("Sum:", sum);
+
+        document.getElementById("result").innerHTML = sum;
+    }
+    </script>
+</head>
+
+<body onload="calculate()">
+
+    <div class="box">
+        <h2>Debugging Example</h2>
+        <p id="result"></p>
+    </div>
+
+</body>
+</html>

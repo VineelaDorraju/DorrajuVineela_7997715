@@ -1,0 +1,213 @@
+<!--Local Community Events Website (All Tasks in one website)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <style>
+    .highlight {
+        color: maroon;
+        text-align: center;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+    #gallery {
+        background-color: goldenrod;
+        padding: 20px;
+        border-radius: 10px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+    table,td{
+        border:4px solid maroon;
+    }
+    .event-img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+    }
+    </style>
+    <script>
+    function showMessage(event) {
+    event.preventDefault();
+    document.getElementById("msg").innerHTML =
+        "Registration submitted successfully!";
+}
+function checkPhone() {
+    let p = document.getElementById("phone").value;
+    document.getElementById("pmsg").innerHTML =
+        (p.length == 10) ? "Valid" : "Invalid";
+}
+
+function showFee(val) {
+    document.getElementById("fee").innerHTML = "Fee: ₹" + val;
+}
+
+function count() {
+    let t = document.getElementById("fb").value;
+    document.getElementById("count").innerText = t.length;
+}
+
+function submitForm() {
+    document.getElementById("emsg").innerHTML =
+        "Submitted successfully!";
+}
+</script>
+</head>
+<body>
+    <h1 style="text-align: center;">Local Community Event Portal</h1>
+    <!--Navigation-->
+    <nav style="text-align: center;">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+    <!--Main Content-->
+    <br>
+    <div id="welcomeBanner" style="text-align: center; background-color: navy; color: white;">
+         Welcome back, User!
+        <span style="color: goldenrod; font-weight: bold;">
+            <p>Special Offer: Free event entry this weekend!</p>
+        </span>
+    </div>
+    <section id="home">
+        <h2 class="highlight">Welcome to the Local Community Event Portal</h2>
+        <p style="text-align: center;">Discover and participate in local events happening around you!</p>
+    </section>
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>Community Picnic - June 15, 2026</li>
+            <li>Farmers Market - Every Saturday</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>To contact us, please click <a href="help.html" target="_blank">here</a>.</p>
+    </section>
+    <section id="gallery">
+        <h2>Past Community Events</h2>
+        <table align="center">
+            <caption>Gallery</caption>
+        <tr>
+            <td style="text-align: center;">
+                <img src="images/picnic.jpg"
+                     alt="Community Picnic"
+                     title="Community Picnic Event"
+                     class="event-img">
+                <p><b>Community Picnic 2025</b></p>
+            </td>
+
+            <td style="text-align: center;">
+                <img src="images/market.jpg"
+                     alt="Farmers Market"
+                     title="Farmers Market"
+                     class="event-img">
+                <p><b>Farmers Market Festival</b></p>
+            </td>
+
+            <td style="text-align: center;">
+                <img src="images/music.jpg"
+                     alt="Music Night"
+                     title="Local Music Night"
+                     class="event-img">
+                <p><b>Music Night Celebration</b></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: center;">
+                <img src="images/sports.jpg"
+                     alt="Sports Event"
+                     title="Community Sports Day"
+                     class="event-img">
+                <p><b>Annual Sports Day</b></p>
+            </td>
+
+            <td style="text-align: center;">
+                <img src="images/clean.jpg"
+                     alt="Cleanup Drive"
+                     title="Neighborhood Cleanup"
+                     class="event-img">
+                <p><b>Neighborhood Cleanup Drive</b></p>
+            </td>
+
+            <td style="text-align: center;">
+                <img src="images/workshop.jpg"
+                     alt="Workshop"
+                     title="Community Workshop"
+                     class="event-img">
+                <p><b>Skill Development Workshop</b></p>
+            </td>
+        </tr>
+    </table>
+</section>
+<section id="registration" align="center">
+    <h2 class="highlight">Event Registration Form</h2>
+
+    <form onsubmit="showMessage(event)">
+        
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" required autofocus><br><br>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required><br><br>
+
+        <label>Event Date:</label>
+        <input type="date" required><br><br>
+
+        <label>Event Type:</label>
+        <select required>
+            <option value="">Select Event</option>
+            <option>Community Picnic</option>
+            <option>Farmers Market</option>
+            <option>Music Festival</option>
+        </select><br><br>
+
+        <label>Message:</label>
+        <textarea placeholder="Enter your message"></textarea><br><br>
+
+        <input type="submit" value="Register">
+
+        <br><br>
+
+        <output id="msg"></output>
+
+    </form>
+</section>
+<h2>Event Feedback Form</h2>
+
+<label>Phone:</label>
+<input type="text" id="phone" placeholder="10-digit number" onblur="checkPhone()">
+<p id="pmsg"></p>
+
+<br>
+
+<label>Event:</label>
+<select onchange="showFee(this.value)">
+    <option value="">Select</option>
+    <option value="100">Picnic</option>
+    <option value="50">Market</option>
+</select>
+<p id="fee"></p>
+
+<br>
+
+<label>Feedback:</label><br>
+<textarea id="fb" onkeyup="count()"></textarea>
+<p>Chars: <span id="count">0</span></p>
+
+<br>
+
+<button onclick="submitForm()">Submit</button>
+<p id="emsg"></p>
+
+<br>
+<h2 style="text-align: justify;">To see the Layout: <a href="task_07.html" target="_blank"> Click Here</a></h2>
+<h2 style="text-align: justify;">To save your event preference: <a href="task_08.html" target="_blank"> Click Here</a></h2>
+<h2 style="text-align: justify;">To find the nearest event based on your location: <a href="task_09.html" target="_blank"> Click Here</a></h2>
+<h2 style="text-align: justify;">To access Debugging with Chrome DevTools: <a href="task_10.html" target="_blank"> Click Here</a></h2>
+    <!--Footer-->
+    Local Community Event Portal &copy; 2026. All rights reserved.
+</body>
+</html>
